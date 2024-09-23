@@ -1,0 +1,15 @@
+# 忽略 CMake 生成的构建目录
+/build/
+
+# 忽略 CMake 生成的缓存文件
+CMakeCache.txt
+CMakeFiles/
+
+# 忽略编译生成的可执行文件
+/app
+
+# 忽略临时文件
+*.tmp
+*.log
+
+.DS_Store
