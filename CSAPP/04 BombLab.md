@@ -23,11 +23,11 @@
 
 去查看`0x402400`的内容：
 
-![[storage bag/Screenshot 2023-11-26 at 16.14.32.png|600]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2016.14.32.png)
 
 输入答案，完成phase_1:
 
-![[storage bag/Screenshot 2023-11-26 at 16.17.46.png|600]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2016.17.46.png)
 
 ### Phase_2
 ![[storage bag/Screenshot 2023-11-26 at 16.22.28.png]]
@@ -38,7 +38,7 @@
 
 <+30>处对eax中的值做了x2操作，不等则炸弹爆炸，故第二个数是2。接下来的内容类似一个循环结构，故剩下的结果依次翻倍即可得到。
 
-![[storage bag/Screenshot 2023-11-26 at 17.21.54.png|500]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2017.21.54.png)
 
 ### Phase_3
 
@@ -46,14 +46,14 @@
 ![[storage bag/Screenshot 2023-11-26 at 17.34.39.png]]
 
 
-![[storage bag/Screenshot 2023-11-26 at 17.35.14.png|533]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2017.35.14.png)
 > 可以看出，输入参数应该是两个*Decimal*，去ans.txt里随便输俩数。
 
 ![[storage bag/Screenshot 2023-11-26 at 17.45.22.png]]
 > +39行指令，如果大于的话跳到106(`0x8(%rsp) - 0x7`>0)，也就是炸弹爆炸。
 ![[storage bag/Screenshot 2023-11-26 at 17.50.20.png]]
 
-![[storage bag/Screenshot 2023-11-26 at 17.52.14.png|413]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2017.52.14.png)
 这就是在ans.txt里写的一个数。
 
 因此将第一个数改为小于7的数后再调试，这里选择了5：
@@ -63,10 +63,10 @@
 > [!tips]
 > eax = 206
 
-![[storage bag/Screenshot 2023-11-26 at 18.33.32.png|627]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2018.33.32.png)
 > $rsp + 0xc = 206
 
-![[storage bag/Screenshot 2023-11-26 at 18.34.12.png|499]]
+![](storage%20bag/Screenshot%202023-11-26%20at%2018.34.12.png)
 > 发现这里刚好是txt中的第二个数
 
 因此，答案为`5:206`
