@@ -17,7 +17,7 @@ def replace_image_links(content):
     def replacement(match):
         path = match.group(1)
         path_encoded = path.replace(' ', '%20')
-        return f'![][{path_encoded}]'
+        return f'![]({path_encoded})'
     
     # 使用re.sub进行替换
     new_content = re.sub(pattern, replacement, content)

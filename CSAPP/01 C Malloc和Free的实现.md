@@ -15,7 +15,8 @@
 
     sbrk()是Unix系统中的一个系统调用，用于增加或减少程序数据段大小，是早期malloc在C/C++中的底层实现核心。
 
-![][storage%20bag/Pasted%20image%2020230925145457.png]
+![](storage%20bag/Pasted%20image%2020230925145457.png)
+
 
 > 可执行和可链接格式（Executable and Linkable Format, 简称 ELF），通常包含程序的执行代码，即实际的机器代码指令。 出于安全考虑，`.text`段通常是只读的。
 
